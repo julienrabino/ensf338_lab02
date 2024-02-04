@@ -1,4 +1,7 @@
 1. Algorithm Description:
 To find the room, the sign will first be used to determine which direction the room is in, and then the room numbers of each individual room will be checked to find the correct one. 
 2. A "step" would constitute each time the room number of a door is checked, thus, from the floor plan, it would take 15 steps to find room EY128. 
-3. 
+3. This would be a worst-case scenario as we are having to check the number of each individual room in the direction indicated by the sign in order to find room EY128. 
+4. With the given sign and floor layout, a worst-case would be to walk in the general direction of a given room number (based on the sign) and then check the number of each room until the correct room is found. A best-case would be to analyze the floor layout and recognize that the room numbers increment by 2 starting at room EY100, and therefore, based on the room that we are looking for, we can begin our search at a room number that is closer to the correct one. 
+5. Improved Algorithm:
+To make the algorithm more efficient, instead of walking in the direction indicated by the sign to find room EY128, we can walk in the other direction as the floor layout shows that room EY128 is closer to the rooms on the right. Furthermore, as EY128 is closer to EY130, we can skip past the first few rooms on the right wall and begin searching for the correct room closer to the end of the hallway on the right. 
