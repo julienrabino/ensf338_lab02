@@ -87,7 +87,7 @@ def main():
     average_lin_times.append(lin_32000_avg)
     average_bin_times.append(bin_32000_avg)
 
-
+    plt.figure(num = 'ex5')
     plt.subplot(1,2,1)
     plt.title('Linear Search')
     slope, intercept = np.polyfit(list_sizes, average_lin_times, 1)
@@ -114,7 +114,7 @@ def main():
 
 
 
-
+    plt.savefig('ex5.png')
     plt.show()
 
 
