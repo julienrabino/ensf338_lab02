@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 # Exercise 1/4
 # 4.
 
-def func(n):
+def func_4(n):
     fib_dict = {}
     
     if n == 0 or n == 1:
@@ -22,7 +22,7 @@ def func(n):
     if n in fib_dict:
         return fib_dict[n]
     
-    result = func(n-1) + func(n-2)
+    result = func_4(n-1) + func_4(n-2)
     fib_dict[n] = result
     return result 
 
