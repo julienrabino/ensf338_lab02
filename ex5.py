@@ -104,7 +104,6 @@ def main():
     popt_bin, _ = curve_fit(fit_func, list_sizes, average_bin_times, p0=[1,1])
     plt.scatter(list_sizes, average_bin_times, label='Binary Search', color='green')
     plt.plot(list_sizes, fit_func(list_sizes, *popt_bin), '--', color='black', label='Binary Fit')
-    plt.yscale('log')
     plt.xlabel('Number of Elements')
     plt.ylabel('Average Time for Search (s)')
     plt.legend()

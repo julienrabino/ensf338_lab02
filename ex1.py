@@ -48,6 +48,7 @@ plt.scatter(input_values, original_times)
 plt.title('Execution Times for Original Function')
 plt.xlabel('Inputs for n')
 plt.ylabel('Execution Time')
+
 plt.savefig('ex1.6.1.png')
 plt.close()
 
@@ -78,7 +79,7 @@ plt.scatter(input_values, improved_times)
 plt.title('Execution Times for Improved Function')
 plt.xlabel('Inputs for n')
 plt.ylabel('Execution Time')
-plt.yscale('log')
+#plt.yscale('log')
 plt.savefig('ex1.6.2.png')
 plt.close()
 
