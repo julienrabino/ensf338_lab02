@@ -43,12 +43,13 @@ for i in range(36):
     elapsed_time1 = timeit.timeit(lambda: func(i), number = 1)
     original_times.append(elapsed_time1)
     input_values.append(i)
-
+plt.figure(num = 'ex1.6.1')
 plt.scatter(input_values, original_times)
 plt.title('Execution Times for Original Function')
 plt.xlabel('Inputs for n')
 plt.ylabel('Execution Time')
-plt.savefig('ex1.6.1.jpg', bbox_inches = 'tight')
+
+plt.savefig('ex1.6.1.png')
 plt.close()
 
 # Plot for Improved Function
@@ -70,11 +71,16 @@ for i in range(36):
     elapsed_time2 = timeit.timeit(lambda: improved_func(i), number = 1)
     improved_times.append(elapsed_time2)
 
+
+
+
+plt.figure(num = 'ex1.6.2')
 plt.scatter(input_values, improved_times)
 plt.title('Execution Times for Improved Function')
 plt.xlabel('Inputs for n')
 plt.ylabel('Execution Time')
-plt.savefig('ex1.6.2.jpg', bbox_inches = 'tight')
+#plt.yscale('log')
+plt.savefig('ex1.6.2.png')
 plt.close()
 
 

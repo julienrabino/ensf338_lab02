@@ -87,7 +87,7 @@ def main():
     average_lin_times.append(lin_32000_avg)
     average_bin_times.append(bin_32000_avg)
 
-
+    plt.figure(num = 'ex5')
     plt.subplot(1,2,1)
     plt.title('Linear Search')
     slope, intercept = np.polyfit(list_sizes, average_lin_times, 1)
@@ -104,7 +104,6 @@ def main():
     popt_bin, _ = curve_fit(fit_func, list_sizes, average_bin_times, p0=[1,1])
     plt.scatter(list_sizes, average_bin_times, label='Binary Search', color='green')
     plt.plot(list_sizes, fit_func(list_sizes, *popt_bin), '--', color='black', label='Binary Fit')
-    plt.yscale('log')
     plt.xlabel('Number of Elements')
     plt.ylabel('Average Time for Search (s)')
     plt.legend()
@@ -114,7 +113,7 @@ def main():
 
 
 
-
+    plt.savefig('ex5.png')
     plt.show()
 
 
